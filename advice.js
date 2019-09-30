@@ -5,7 +5,7 @@ function get(url) {
     return fetch(url).then(resp => resp.json())
 }
 
-API = { get }
+const API = { get }
 
 const fontType = ["Roboto Mono", "Roboto Slab", "Abril Fatface", "Notable", "Bungee"]
 const colours = ["#FFCDD2", "#FCE4EC", "#F3E5F5", "#8C9EFF", "#90CAF9", "#80D8FF", "#80DEEA", "#B2DFDB", "#69F0AE", "#AED581", "#AED581", "#FFC400", "#BCAAA4", "#90A4AE"]
@@ -22,7 +22,7 @@ function addQuote(quote) {
     quoteP.innerText = quote;
     let fontsNum = Math.floor(Math.random()*fontType.length);
     let coloursNum = Math.floor(Math.random()*colours.length);
-    document.getElementById("quote").style.fontFamily=fontType[fontsNum];
+    quoteP.style.fontFamily=fontType[fontsNum];
     bground.style.backgroundColor = colours[coloursNum]
 }
 
